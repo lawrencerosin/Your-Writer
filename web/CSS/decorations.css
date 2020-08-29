@@ -1,0 +1,24 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 9, 2020, 10:09:59 AM
+    Author     : nelli
+*/
+#document{
+    background-color:green;
+}
+
+#signIn{
+    background-color: lightblue;
+}
+.blueBackground{
+    background-color: blue;
+    border:1px solid blue;
+}
+.orangeBackground{
+    background-color:orange;
+    border:1px solid blue;
+}

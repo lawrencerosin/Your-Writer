@@ -1,0 +1,82 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 10, 2020, 12:03:40 PM
+    Author     : nelli
+*/
+#greenBackground{
+    background-color:green;
+    border-color: green;
+}
+.lightGreenBackground{
+    background-color:lightgreen;
+    border-color:lightgreen;
+}
+.textAreaImage{
+    background-color:white;
+    width:300px;
+    height:100px;
+}
+.yellowText{
+    color:yellow;
+}
+.yellowBackground{
+    background-color: yellow;
+    border-color: yellow;
+}
+.lightBlueBackground{
+    background-color:lightblue;
+}
+.orangeBackground{
+    background-color:orange;
+    border-color: orange;
+}
+.blueBackground{
+    background-color:blue;
+    border-color:blue;
+}
+.grayBackground{
+    background-color:gray;
+    border-color:gray;
+}
+.yellowBackground{
+    background-color: yellow;
+    border-color:yellow;
+}
+.pinkBackground{
+    background-color:pink;
+    border-color:pink;
+}
+#aquaBackground{
+    background-color:aqua;
+    border-color: aqua;
+}
+.redBackground{
+    background-color:red;
+    border-color:red;
+}
+.whiteText{
+    color:white;
+}
+.blueText{
+    color:blue;
+}
+.redText{
+    color:red;
+}
+#homeLink{
+    background-color:green;
+    color:yellow;
+}
+page{
+    background-color:white;
+    width:100px;
+    height:300px;
+}
+a:hover{
+    background-color:white;
+    
+}
