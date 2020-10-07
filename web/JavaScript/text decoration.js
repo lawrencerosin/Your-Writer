@@ -19,8 +19,7 @@ function AddFontSizes(){
             sizeOption.selected=true;
     }
 }
-var app=angular.module("myApp", []);
-app.controller("fontSize", AddFontSizes);
+
 function FindAlignment(){
     const ALIGNMENTS=["left", "center", "right"];
     alignmentBoxes=$("#alignment").find("input");
@@ -64,8 +63,7 @@ function AddDecorationStyling(){
     if(writing.selectionStart>=writing.textContent.length)
         updatedText+="<span class='"+classesToAdd+"' style='font-family:"+fontFamily+"; font-size:"+fontSize+"; text-align:"+FindAlignment()+"'></span>";
     writing.textContent=updatedText;
-}
-var app=angular.module("document", []);
+ }
 function AddDecorationEffects(){
     decorations=$("#decorations").find("input");
     $(decorations).each(function(position, decoration){
