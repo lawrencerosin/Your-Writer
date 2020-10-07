@@ -4,12 +4,36 @@
  * and open the template in the editor.
  
 */
+var title;
+function DocumentOpened(callback){
+    if(sessionStorage.getItem("title")!==null&&typeof callback=="function"){
+        title=sessionStorage.getitem("title");
+        callback();
+    }
+}
 //Is used to avoid problems because the title of the document and content of the document are passed together
 function NoPeriod(text){
     for(var position=0; position<text.length; position++)
         if(text.charAt(position)=='.')
             return false;
     return true;
+}
+function AskToSave(){
+    DocumentOpened(function(){
+       $.ajax({
+          url: "changesMade",
+          type: "POST",
+          data:{"title":sessionStorage.getItem("title")},
+          success: function(data){
+              if(data=="changed"){
+                  var save=confirm("You have made changes to "+title+", but you didn't save them. Would you like to?");
+                  if(save){
+                      Save();
+                  }
+              }
+          }
+       });
+    });
 }
 function NewDocument(){
     document.getElementById("writing").value="";
@@ -67,11 +91,9 @@ function ViewDocuments(){
        data: {"email":email},
        success: function(data){
            alert(data);
-       }, 
-       error: function(xhr){
-           alert(xhr.status);
        }
-   })
+       
+   });
 }
 function IsTheLetter(character, letter){
     if(character.charCodeAt(0)==letter.charCodeAt(0)||character.charCodeAt(0)==letter.charCodeAt(0)-32)
